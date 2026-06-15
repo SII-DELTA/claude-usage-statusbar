@@ -76,19 +76,6 @@ code --install-extension claude-usage-statusbar-1.0.0.vsix
 Reload the window after installing so the custom icon font loads.
 安装后请重载窗口，使自定义图标字体生效。
 
-## Publish / 发布
-
-This package uses one `.vsix` for both languages (via VSCode l10n) — no separate per-language builds. To publish to the Marketplace you need your own publisher and a PAT:
-
-发布到应用市场需要你自己的 publisher 与 PAT（中英文同在一个 vsix 中，无需分别打包）：
-
-```bash
-vsce login <your-publisher>
-vsce publish
-```
-
-The `publisher` / `repository` fields in `package.json` are placeholders for local use — set your own before publishing.
-
 ## Notes / 说明
 
 - Some model windows (e.g. Sonnet) may be unused this week; they have no reset time and the tooltip omits the reset line for them.
