@@ -1,0 +1,10 @@
+.vscode/**
+node_modules/**
+.gitignore
+*.vsix
+**/*.map
+.DS_Store
+build-icons.js
+icons/*.svg
+icons/*.ttf
+icons/prev/**

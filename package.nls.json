@@ -1,0 +1,12 @@
+{
+  "displayName": "Claude Code Usage",
+  "description": "Show Claude Code subscription usage in the status bar (current session remaining, weekly limits, reset times).",
+  "command.refresh.title": "Claude Usage: Refresh now",
+  "config.refreshInterval.description": "Auto-refresh interval in seconds. The endpoint is aggressively rate-limited, so the minimum is 180s.",
+  "config.show.description": "Which metrics to show in the status bar text (full details are always in the hover tooltip).",
+  "config.show.session": "Show only the current session (5h) remaining",
+  "config.show.sessionWeekly": "Show both current session (5h) and weekly (7d) remaining",
+  "config.resetStyle.description": "How reset times are shown in the status bar.",
+  "config.resetStyle.relative": "Relative duration, e.g. 67% (4h25m) · 87% (3d)",
+  "config.resetStyle.clock": "Clock time, e.g. 67% (2:45 PM) · 87% (Fri 11:59 AM)"
+}

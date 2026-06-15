@@ -1,0 +1,12 @@
+{
+  "displayName": "Claude Code 用量",
+  "description": "在状态栏显示 Claude Code 订阅用量（当前会话剩余量、每周限额、重置时间）。",
+  "command.refresh.title": "Claude Usage: 立即刷新用量",
+  "config.refreshInterval.description": "自动刷新间隔（秒）。接口对轮询限流较严，最小 180 秒。",
+  "config.show.description": "状态栏文本显示哪些指标（详细信息始终在悬浮 tooltip 中）。",
+  "config.show.session": "仅显示当前会话（5h）剩余量",
+  "config.show.sessionWeekly": "显示当前会话（5h）与每周（7d）剩余量",
+  "config.resetStyle.description": "状态栏中重置时间的显示风格。",
+  "config.resetStyle.relative": "相对时长，如 67% (4h25m) · 87% (3d)",
+  "config.resetStyle.clock": "时钟，如 67% (2:45 PM) · 87% (Fri 11:59 AM)"
+}

@@ -1,0 +1,101 @@
+{
+  "name": "claude-usage-statusbar",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "li-yonghua",
+  "author": "Li Yonghua",
+  "license": "MIT",
+  "icon": "icons/marketplace.png",
+  "l10n": "./l10n",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SII-DELTA/claude-usage-statusbar.git"
+  },
+  "homepage": "https://github.com/SII-DELTA/claude-usage-statusbar#readme",
+  "bugs": {
+    "url": "https://github.com/SII-DELTA/claude-usage-statusbar/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "claude code",
+    "usage",
+    "rate limit",
+    "statusbar"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "icons": {
+      "claude-logo": {
+        "description": "Claude logo",
+        "default": {
+          "fontPath": "icons/claude-usage.woff",
+          "fontCharacter": "\\E001"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "claudeUsage.refresh",
+        "title": "%command.refresh.title%"
+      }
+    ],
+    "configuration": {
+      "title": "Claude Code Usage",
+      "properties": {
+        "claudeUsage.refreshInterval": {
+          "type": "number",
+          "default": 300,
+          "minimum": 180,
+          "description": "%config.refreshInterval.description%"
+        },
+        "claudeUsage.show": {
+          "type": "string",
+          "enum": [
+            "session",
+            "sessionWeekly"
+          ],
+          "enumDescriptions": [
+            "%config.show.session%",
+            "%config.show.sessionWeekly%"
+          ],
+          "default": "sessionWeekly",
+          "description": "%config.show.description%"
+        },
+        "claudeUsage.resetStyle": {
+          "type": "string",
+          "enum": [
+            "relative",
+            "clock"
+          ],
+          "enumDescriptions": [
+            "%config.resetStyle.relative%",
+            "%config.resetStyle.clock%"
+          ],
+          "default": "relative",
+          "description": "%config.resetStyle.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build:icons": "node build-icons.js",
+    "package": "vsce package --allow-missing-repository --no-dependencies"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.0",
+    "opentype.js": "^2.0.0",
+    "svg2ttf": "^6.1.0",
+    "svgicons2svgfont": "^16.0.0",
+    "ttf2woff": "^3.0.0"
+  }
+}
